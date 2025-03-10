@@ -6,11 +6,10 @@ export default defineConfig({
     expect: {
         timeout: 120000,
     },
-    retries: process.env.CI ? 1 : 0,
-    workers: process.env.CI? 1 : 6,
+    retries: process.env.CI ? 2 : 0,
+    workers: process.env.CI? 1 : 4,
     use: {
         headless: process.env.CI ? true : false,
-        // viewport: process.env.CI ? { width: 1920, height: 1080 } : null,
         launchOptions: {
             args: ['--start-maximized'],
         },
