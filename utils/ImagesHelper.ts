@@ -25,7 +25,7 @@ export class ImagesHelper {
                 src = ImagesHelper.getFullUrl(page, src);
     
                 try {
-                    const response = await page.request.get(src, { timeout: 15000 });
+                    const response = await page.request.get(src, { timeout: 30000 });
                     if (!response.ok()) {
                         brokenImages.push(`${src} - Status: ${response.status()}`);
                     }
